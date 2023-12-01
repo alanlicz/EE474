@@ -1,0 +1,349 @@
+###############################################################################
+#
+# IAR ELF Linker V8.11.3.13950/W32 for ARM                03/Feb/2023  12:31:57
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\Alan\iCloudDrive\Documents\UW\EE474\lab2\Debug\Exe\task2c.out
+#    Map file     =  
+#        C:\Users\Alan\iCloudDrive\Documents\UW\EE474\lab2\Debug\List\task2c.map
+#    Command line =  
+#        -f C:\Users\Alan\AppData\Local\Temp\EWA73F.tmp
+#        (C:\Users\Alan\iCloudDrive\Documents\UW\EE474\lab2\Debug\Obj\cstartup_M.o
+#        C:\Users\Alan\iCloudDrive\Documents\UW\EE474\lab2\Debug\Obj\task2partcmain.o
+#        -o
+#        C:\Users\Alan\iCloudDrive\Documents\UW\EE474\lab2\Debug\Exe\task2c.out
+#        --map
+#        C:\Users\Alan\iCloudDrive\Documents\UW\EE474\lab2\Debug\List\task2c.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\TexasInstruments\TM4C1294NC.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = Basic
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x000fffff] { ro };
+define block CSTACK with size = 32K, alignment = 8 { };
+define block HEAP with size = 64K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x2003ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address     Size  Object
+  -------            ----        -------     ----  ------
+"A0":                                       0x168
+  .intvec            const    0x00000000    0x168  cstartup_M.o [1]
+                            - 0x00000168    0x168
+
+"P1":                                      0x1195
+  .text              ro code  0x00000168    0x614  task2partcmain.o [1]
+  .text              ro code  0x0000077c     0x28  printf.o [3]
+  .text              ro code  0x000007a4    0x13e  xprintftiny.o [3]
+  .text              ro code  0x000008e2      0x2  cstartup_M.o [1]
+  .text              ro code  0x000008e4     0x36  strlen.o [5]
+  .text              ro code  0x0000091a      0x2  cstartup_M.o [1]
+  .text              ro code  0x0000091c    0x144  heap0.o [3]
+  .text              ro code  0x00000a60     0x2c  xgetmemchunk.o [3]
+  .text              ro code  0x00000a8c     0xd8  xfspos.o [3]
+  .text              ro code  0x00000b64     0xac  fflush.o [3]
+  .text              ro code  0x00000c10      0xc  xfgpos.o [3]
+  .text              ro code  0x00000c1c     0x4c  lseek.o [6]
+  .text              ro code  0x00000c68     0x10  write.o [6]
+  .text              ro code  0x00000c78     0xcc  XShHandles.o [3]
+  .text              ro code  0x00000d44     0x1e  dwrite.o [6]
+  .text              ro code  0x00000d62     0x20  iarwstd.o [6]
+  .text              ro code  0x00000d82     0x22  iarwrite.o [6]
+  .text              ro code  0x00000da4     0x68  iarttio.o [6]
+  .text              ro code  0x00000e0c      0x8  XShttio.o [3]
+  .text              ro code  0x00000e14     0xb4  xfwprep.o [3]
+  .text              ro code  0x00000ec8     0x24  fseek.o [3]
+  .text              ro code  0x00000eec     0x7e  fclose.o [3]
+  .text              ro code  0x00000f6a      0x2  cstartup_M.o [1]
+  .text              ro code  0x00000f6c     0x7c  xfofind.o [3]
+  .text              ro code  0x00000fe8      0x4  heaptramp0.o [3]
+  .text              ro code  0x00000fec     0x1a  close.o [6]
+  .text              ro code  0x00001006     0x16  remove.o [6]
+  .text              ro code  0x0000101c     0x56  fputc.o [3]
+  .text              ro code  0x00001072     0x40  zero_init3.o [5]
+  .text              ro code  0x000010b2      0x2  cstartup_M.o [1]
+  .text              ro code  0x000010b4     0x3c  xcloseall.o [3]
+  .text              ro code  0x000010f0     0x38  packbits_init_single.o [5]
+  .text              ro code  0x00001128     0x28  data_init.o [5]
+  .text              ro code  0x00001150     0x22  fpinit_M.o [4]
+  .iar.init_table    const    0x00001174     0x20  - Linker created -
+  .text              ro code  0x00001194      0x2  cstartup_M.o [1]
+  .text              ro code  0x00001198     0x1a  cmain.o [5]
+  .text              ro code  0x000011b2      0x4  low_level_init.o [3]
+  .text              ro code  0x000011b6      0x4  exit.o [3]
+  .text              ro code  0x000011ba      0x2  cstartup_M.o [1]
+  .text              ro code  0x000011bc      0xe  cexit.o [5]
+  .text              ro code  0x000011ca      0x2  cstartup_M.o [1]
+  .text              ro code  0x000011cc     0x14  exit.o [6]
+  .text              ro code  0x000011e0     0x16  xprout.o [3]
+  .text              ro code  0x000011f6      0x2  cstartup_M.o [1]
+  .text              ro code  0x000011f8      0xc  putchar.o [3]
+  .rodata            const    0x00001204     0x14  task2partcmain.o [1]
+  .rodata            const    0x00001218     0x14  task2partcmain.o [1]
+  .rodata            const    0x0000122c     0x10  task2partcmain.o [1]
+  .text              ro code  0x0000123c     0x10  cstartup_M.o [1]
+  .rodata            const    0x0000124c      0xc  task2partcmain.o [1]
+  .rodata            const    0x00001258      0x8  task2partcmain.o [1]
+  .rodata            const    0x00001260      0x8  task2partcmain.o [1]
+  .rodata            const    0x00001268      0x8  task2partcmain.o [1]
+  .text              ro code  0x00001270      0x2  cstartup_M.o [1]
+  .text              ro code  0x00001272      0x2  cstartup_M.o [1]
+  .text              ro code  0x00001274      0x0  cstart_closeall.o [5]
+  .rodata            const    0x00001274      0x0  zero_init3.o [5]
+  .rodata            const    0x00001274      0x0  packbits_init_single.o [5]
+  Initializer bytes  const    0x00001274     0x89  <for P2-1>
+                            - 0x000012fd   0x1195
+
+"P2", part 1 of 3:                          0x100
+  P2-1                        0x20000000    0x100  <Init block>
+    .data            inited   0x20000000     0x48  xfiles.o [3]
+    .data            inited   0x20000048     0x48  xfiles.o [3]
+    .data            inited   0x20000090     0x48  xfiles.o [3]
+    .data            inited   0x200000d8     0x20  xfiles.o [3]
+    .data            inited   0x200000f8      0x8  XShttio.o [3]
+                            - 0x20000100    0x100
+
+"P2", part 2 of 3:                          0x130
+  .bss               zero     0x20000100     0x80  XShHandles.o [3]
+  .bss               zero     0x20000180     0x50  xfiles.o [3]
+  .bss               zero     0x200001d0     0x50  xfiles.o [3]
+  .bss               zero     0x20000220      0x8  heap0.o [3]
+  .bss               zero     0x20000228      0x4  xgetmemchunk.o [3]
+  .bss               zero     0x2000022c      0x1  task2partcmain.o [1]
+                            - 0x2000022d    0x12d
+
+"P2", part 3 of 3:                        0x18000
+  CSTACK                      0x20000230   0x8000  <Block>
+    CSTACK           uninit   0x20000230   0x8000  <Block tail>
+  HEAP                        0x20008230  0x10000  <Block>
+    HEAP             uninit   0x20008230  0x10000  <Block tail>
+                            - 0x20018230  0x18000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x12d:
+          0x20000100  0x12d
+
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x89 (53% of destination):
+          0x00001274   0x89
+    1 destination range, total size 0x100:
+          0x20000000  0x100
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+C:\Users\Alan\iCloudDrive\Documents\UW\EE474\lab2\Debug\Obj: [1]
+    cstartup_M.o                 36      360
+    task2partcmain.o          1 556       92        1
+    -------------------------------------------------
+    Total:                    1 592      452        1
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    XShHandles.o                204               128
+    XShttio.o                     8        5        8
+    exit.o                        4
+    fclose.o                    126
+    fflush.o                    172
+    fputc.o                      86
+    fseek.o                      36
+    heap0.o                     324                 8
+    heaptramp0.o                  4
+    low_level_init.o              4
+    printf.o                     40
+    putchar.o                    12
+    xcloseall.o                  60
+    xfgpos.o                     12
+    xfiles.o                             132      408
+    xfofind.o                   124
+    xfspos.o                    216
+    xfwprep.o                   180
+    xgetmemchunk.o               44                 4
+    xprintftiny.o               318
+    xprout.o                     22
+    -------------------------------------------------
+    Total:                    1 996      137      556
+
+m7M_tls.a: [4]
+    fpinit_M.o                   34
+    -------------------------------------------------
+    Total:                       34
+
+rt7M_tl.a: [5]
+    cexit.o                      14
+    cmain.o                      26
+    cstart_closeall.o
+    data_init.o                  40
+    packbits_init_single.o       56
+    strlen.o                     54
+    zero_init3.o                 64
+    -------------------------------------------------
+    Total:                      254
+
+shb_l.a: [6]
+    close.o                      26
+    dwrite.o                     30
+    exit.o                       20
+    iarttio.o                   104
+    iarwrite.o                   34
+    iarwstd.o                    32
+    lseek.o                      76
+    remove.o                     22
+    write.o                      16
+    -------------------------------------------------
+    Total:                      360
+
+    Gaps                          2        2
+    Linker created                        32   98 304
+-----------------------------------------------------
+    Grand Total:              4 238      623   98 861
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x00001174          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00001194          --   Gb  - Linker created -
+?main                   0x00001199         Code  Gb  cmain.o [5]
+Aldata                  0x20000220    0x8  Data  Lc  heap0.o [3]
+CSTACK$$Base            0x20000230          --   Gb  - Linker created -
+CSTACK$$Limit           0x20008230          --   Gb  - Linker created -
+HEAP$$Base              0x20008230          --   Gb  - Linker created -
+HEAP$$Limit             0x20018230          --   Gb  - Linker created -
+LED_init                0x00000351   0xfe  Code  Gb  task2partcmain.o [1]
+LED_off                 0x00000521   0x4e  Code  Gb  task2partcmain.o [1]
+LED_on                  0x000004d9   0x48  Code  Gb  task2partcmain.o [1]
+PortN_Handler           0x0000064d   0x76  Code  Gb  task2partcmain.o [1]
+Region$$Table$$Base     0x00001174          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00001194          --   Gb  - Linker created -
+Timer0A_Handler         0x0000062f   0x1e  Code  Gb  task2partcmain.o [1]
+Timer1A_Handler         0x0000044f   0x4c  Code  Gb  task2partcmain.o [1]
+Timer2A_Handler         0x0000049b   0x3e  Code  Gb  task2partcmain.o [1]
+_Close_all              0x000010b5   0x3c  Code  Gb  xcloseall.o [3]
+_Files                  0x200000d8   0x20  Data  Gb  xfiles.o [3]
+_Fofree                 0x00000f6d   0x78  Code  Gb  xfofind.o [3]
+_Fspos                  0x00000a8d   0xd8  Code  Gb  xfspos.o [3]
+_Fwprep                 0x00000e15   0xb4  Code  Gb  xfwprep.o [3]
+_Nnl                    0x00000c11    0xc  Code  Gb  xfgpos.o [3]
+_PrintfTiny             0x000007bd  0x126  Code  Gb  xprintftiny.o [3]
+_Prout                  0x000011e1   0x16  Code  Gb  xprout.o [3]
+__basic_free            0x000009cb   0x16  Code  Gb  heap0.o [3]
+__basic_free_intern     0x000009e1   0x7a  Code  Lc  heap0.o [3]
+__basic_malloc          0x0000091d   0x18  Code  Gb  heap0.o [3]
+__basic_malloc_intern   0x00000935   0x96  Code  Lc  heap0.o [3]
+__cexit_closeall        0x000011bf         Code  Gb  cexit.o [5]
+__close                 0x00000fed   0x1a  Code  Gb  close.o [6]
+__cmain                 0x00001199         Code  Gb  cmain.o [5]
+__cstart_closeall       0x00001274         Data  Gb  cstart_closeall.o [5]
+__data_GetMemChunk      0x00000a61   0x2c  Code  Gb  xgetmemchunk.o [3]
+__data_GetMemChunk::start
+                        0x20000228    0x4  Data  Lc  xgetmemchunk.o [3]
+__dwrite                0x00000d45   0x1e  Code  Gb  dwrite.o [6]
+__exit                  0x000011cd   0x14  Code  Gb  exit.o [6]
+__iar_Stderr            0x20000090   0x48  Data  Gb  xfiles.o [3]
+__iar_Stdin             0x20000000   0x48  Data  Gb  xfiles.o [3]
+__iar_Stdout            0x20000048   0x48  Data  Gb  xfiles.o [3]
+__iar_close_ttio        0x00000da5   0x2c  Code  Gb  iarttio.o [6]
+__iar_data_init3        0x00001129   0x28  Code  Gb  data_init.o [5]
+__iar_get_ttio          0x00000dd1   0x38  Code  Gb  iarttio.o [6]
+__iar_init_vfp          0x00001151         Code  Gb  fpinit_M.o [4]
+__iar_lookup_ttioh      0x00000e0d    0x8  Code  Gb  XShttio.o [3]
+__iar_packbits_init_single3
+                        0x000010f1   0x38  Code  Gb  packbits_init_single.o [5]
+__iar_program_start     0x0000123d   0x10  Code  Gb  cstartup_M.o [1]
+__iar_sh_Discard        0x00000c79   0x42  Code  Gb  XShHandles.o [3]
+__iar_sh_Move           0x00000cbb   0x46  Code  Gb  XShHandles.o [3]
+__iar_sh_Pos            0x00000d01   0x3e  Code  Gb  XShHandles.o [3]
+__iar_sh_stdout         0x00000d63   0x20  Code  Gb  iarwstd.o [6]
+__iar_sh_write          0x00000d83   0x22  Code  Gb  iarwrite.o [6]
+__iar_systems$$module {Abs}
+                        0x00000001         Data  Gb  command line/config [2]
+__iar_ttio_handles      0x200000f8    0x8  Data  Lc  XShttio.o [3]
+__iar_zero_init3        0x00001073   0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x000011b3    0x4  Code  Gb  low_level_init.o [3]
+__lseek                 0x00000c1d   0x4c  Code  Gb  lseek.o [6]
+__vector_table          0x00000000  0x168  Data  Gb  cstartup_M.o [1]
+__write                 0x00000c69   0x10  Code  Gb  write.o [6]
+_call_main              0x000011a5         Code  Gb  cmain.o [5]
+_exit                   0x000011bd         Code  Gb  cexit.o [5]
+_main                   0x000011af         Code  Gb  cmain.o [5]
+ebuf                    0x20000180   0x50  Data  Lc  xfiles.o [3]
+exit                    0x000011b7    0x4  Code  Gb  exit.o [3]
+extern_switch_init      0x00000279   0xd8  Code  Gb  task2partcmain.o [1]
+fclose                  0x00000eed   0x7e  Code  Gb  fclose.o [3]
+fflush                  0x00000bd9   0x34  Code  Gb  fflush.o [3]
+fflushOne               0x00000b65   0x74  Code  Lc  fflush.o [3]
+fputc                   0x0000101d   0x56  Code  Gb  fputc.o [3]
+free                    0x00000fe9    0x4  Code  Gb  heaptramp0.o [3]
+fseek                   0x00000ec9   0x24  Code  Gb  fseek.o [3]
+main                    0x00000169   0x10  Code  Gb  task2partcmain.o [1]
+obuf                    0x200001d0   0x50  Data  Lc  xfiles.o [3]
+out                     0x000007a5   0x18  Code  Lc  xprintftiny.o [3]
+printf                  0x0000077d   0x28  Code  Gb  printf.o [3]
+putchar                 0x000011f9    0xc  Code  Gb  putchar.o [3]
+remove                  0x00001007   0x16  Code  Gb  remove.o [6]
+sFileInfo               0x20000100   0x80  Data  Lc  XShHandles.o [3]
+state                   0x2000022c    0x1  Data  Gb  task2partcmain.o [1]
+strlen                  0x000008e5         Code  Gb  strlen.o [5]
+timer_init              0x00000179  0x100  Code  Gb  task2partcmain.o [1]
+trafficLight_SM         0x0000056f   0xc0  Code  Gb  task2partcmain.o [1]
+
+
+[1] = C:\Users\Alan\iCloudDrive\Documents\UW\EE474\lab2\Debug\Obj
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+   4 238 bytes of readonly  code memory
+     623 bytes of readonly  data memory
+  98 861 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

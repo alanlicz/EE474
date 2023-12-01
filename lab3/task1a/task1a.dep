@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>3117381151</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_Inits.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C1294NC.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_Inits.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\List\task1a.map</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cstartup_M.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\cstartup_M.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_Task1a.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cstartup_M.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_Task1a.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_Inits.pbi</file>
+            <file>$PROJ_DIR$\Debug\Exe\task1a.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_Task1a.__cstat.et</file>
+            <file>$PROJ_DIR$\cstartup_M.c</file>
+            <file>$PROJ_DIR$\Lab3_Task1a.c</file>
+            <file>$PROJ_DIR$\Lab3_Inits.c</file>
+            <file>$PROJ_DIR$\PLL_Header.h</file>
+            <file>$PROJ_DIR$\task1header.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\Lab3_Inits.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\task1a.pbd</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\task1a.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 5</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 2 9 3 13 6 0 10 11</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\cstartup_M.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 8</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Lab3_Task1a.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 18</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 22</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 4 19 15 16 7 17 28 12 29 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 15 16 19 28 12 4 29 7 17 27</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Lab3_Inits.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 3</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 20</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 1</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 26 4 19 15 16 7 17 29 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 27 29 4 15 16 26 7 17</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 5 21</file>
+                </tool>
+            </outputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
